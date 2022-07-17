@@ -1,0 +1,146 @@
+.about-me {
+  padding: 100px 0;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.about-me__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 65px 0 0;
+}
+
+.about-me__text {
+  max-width: 600px;
+  width: 100%;
+}
+
+.about-me__name {
+  margin: 0;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 58px;
+}
+
+.about-me__program {
+  margin: 18px 0 26px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.about-me__description {
+  margin: 0 0 80px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.contact-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.contact-item {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-right: 20px;
+}
+
+.about-me__image {
+  width: 270px;
+  height: 327px;
+  object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1084px) {
+  .about-me__image {
+    width: 255px;
+    height: 307px;
+  }
+
+  .about-me__text {
+    max-width: 500px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .about-me {
+    padding: 90px 0;
+  }
+
+  .about-me__image {
+    width: 255px;
+    height: 307px;
+  }
+
+  .about-me__text {
+    max-width: 364px;
+  }
+
+  .about-me__name {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .about-me__program {
+    margin: 16px 0 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .about-me__description {
+    margin: 0 0 67px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about-me {
+    padding: 70px 0 78px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-me__info {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 64px 0 0;
+  }
+
+  .about-me__image {
+    width: 292px;
+    height: 352px;
+    margin: 0 0 40px;
+  }
+
+  .about-me__text {
+    max-width: 500px;
+  }
+
+  .about-me__name {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .about-me__program {
+    margin: 20px 0 20px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about-me__description {
+    margin: 0 0 16px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
