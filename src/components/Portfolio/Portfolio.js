@@ -1,6 +1,6 @@
 function Portfolio() {
   return (
-    <div className="portfolio">
+    <section className="portfolio">
       <h3 className="portfolio__title">Портфолио</h3>
       <ul className="portfolio-items">
         <li className="portfolio-item">
@@ -58,7 +58,7 @@ function Portfolio() {
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }
 

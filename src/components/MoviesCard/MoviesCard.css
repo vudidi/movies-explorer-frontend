@@ -12,6 +12,7 @@
 }
 
 .movie__title {
+  margin-right: 20px;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
@@ -60,6 +61,14 @@
 }
 
 @media screen and (max-width: 700px) {
+  .movie__title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .movie {
     flex-direction: column-reverse;
     align-items: center;
@@ -85,11 +94,6 @@
     margin: 14px 0 18px;
   }
 
-  .movie__title {
-    font-size: 12px;
-    line-height: 15px;
-  }
-
   .movie__durarion {
     margin: 8px 0 0;
   }
@@ -104,6 +108,12 @@
     max-width: 300px;
     width: 100%;
     margin: 0 auto 14px;
+  }
+
+  .movie__title {
+    margin-right: 0;
+    font-size: 12px;
+    line-height: 15px;
   }
 
   .movie__image {

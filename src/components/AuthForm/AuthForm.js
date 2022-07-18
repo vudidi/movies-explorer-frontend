@@ -12,7 +12,7 @@ function AuthForm(props) {
         </form>
       </div>
       <div className="auth__button-container">
-        <button className="active-element auth__confirm-button">
+        <button className="active-element auth__confirm-button" type="button">
           {props.buttonTitle}
         </button>
         <div className="auth__link-container">

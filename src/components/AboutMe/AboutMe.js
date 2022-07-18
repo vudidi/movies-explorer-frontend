@@ -1,6 +1,6 @@
 function AboutMe() {
   return (
-    <div className="about-me">
+    <section className="about-me">
       <h2 className="section-title">Студент</h2>
       <div className="about-me__info">
         <div className="about-me__text">
@@ -43,7 +43,7 @@ function AboutMe() {
           src="https://images.unsplash.com/photo-1656815995591-afed11a0afc7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
         ></img>
       </div>
-    </div>
+    </section>
   );
 }
 

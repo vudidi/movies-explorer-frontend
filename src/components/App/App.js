@@ -22,15 +22,18 @@ function App() {
   return (
     <div className="app">
       <Header onOpenMenu={toggleBurgerMenu} isMenuOpen={isBurgerMenuOpen} />
-      <Routes>
-        <Route exact path="/" element={<Main />}></Route>
-        <Route path="/movies" element={<Movies />}></Route>
-        <Route path="/saved-movies" element={<SavedMovies />}></Route>
-        <Route path="/profile" element={<Profile />}></Route>
-        <Route path="/signup" element={<Register />}></Route>
-        <Route path="/signin" element={<Login />}></Route>
-        <Route path="*" element={<NotFoundPage />}></Route>
-      </Routes>
+      <main>
+        {' '}
+        <Routes>
+          <Route exact path="/" element={<Main />}></Route>
+          <Route path="/movies" element={<Movies />}></Route>
+          <Route path="/saved-movies" element={<SavedMovies />}></Route>
+          <Route path="/profile" element={<Profile />}></Route>
+          <Route path="/signup" element={<Register />}></Route>
+          <Route path="/signin" element={<Login />}></Route>
+          <Route path="*" element={<NotFoundPage />}></Route>
+        </Routes>
+      </main>
       <Footer />
       <MessagePopup />
     </div>

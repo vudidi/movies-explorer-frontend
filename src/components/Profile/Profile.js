@@ -2,7 +2,7 @@ import React from 'react';
 
 function Profile() {
   return (
-    <div className="profile">
+    <section className="profile">
       <div className="profile__container">
         <h1 className="profile__title">Привет, Виталий!</h1>
         <form className="profile__form" name="profile" id="profile">
@@ -41,14 +41,14 @@ function Profile() {
             />
           </div>
         </form>
-        <button className="active-element profile__update-button">
+        <button className="active-element profile__update-button" type="button">
           Редактировать
         </button>
-        <button className="active-element profile__logout-button">
+        <button className="active-element profile__logout-button" type="button">
           Выйти из аккаунта
         </button>
       </div>
-    </div>
+    </section>
   );
 }
 

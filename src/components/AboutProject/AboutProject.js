@@ -2,13 +2,13 @@ import React from 'react';
 
 function AboutProject() {
   return (
-    <div className="project" id="project-about">
+    <section className="project" id="project-about">
       <h2 className="section-title">О проекте</h2>
       <div className="section-line"></div>
       <ul className="project-items">
         <li className="project-item">
           <h3 className="project-item__title">
-            Дипломный проект включал 5 этапов
+            Дипломный проект включал 5&nbsp;этапов
           </h3>
           <p className="project-item__subtitle">
             Составление плана, работу над бэкендом, вёрстку, добавление
@@ -17,7 +17,7 @@ function AboutProject() {
         </li>
         <li className="project-item">
           <h3 className="project-item__title">
-            На выполнение диплома ушло 5 недель
+            На выполнение диплома ушло 5&nbsp;недель
           </h3>
           <p className="project-item__subtitle">
             У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было
@@ -37,7 +37,7 @@ function AboutProject() {
           <p className="tracker-item__title">Front-end</p>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }
 

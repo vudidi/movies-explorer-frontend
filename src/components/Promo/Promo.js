@@ -3,7 +3,7 @@ import useWindowWidth from '../../hooks/getWindowWidth.js';
 
 function Promo() {
   return (
-    <div className="promo">
+    <section className="promo">
       <div className="promo__text">
         {useWindowWidth() >= 540 ? (
           <h1 className="promo__title">
@@ -20,7 +20,7 @@ function Promo() {
         </h2>
       </div>
       <div className="promo__image"></div>
-    </div>
+    </section>
   );
 }
 

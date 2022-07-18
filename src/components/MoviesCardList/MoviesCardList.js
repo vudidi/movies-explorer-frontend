@@ -11,7 +11,7 @@ function MoviesCardList() {
   }
 
   return (
-    <div className="movies__container">
+    <section className="movies__container">
       {useWindowWidth() >= 700 ? (
         <ul className="movies">
           <MoviesCard
@@ -81,10 +81,14 @@ function MoviesCardList() {
       )}
 
       {isPreloaderActive && <Preloader />}
-      <button className="movies__load-button" onClick={handleLoadButton}>
+      <button
+        className="movies__load-button"
+        type="button"
+        onClick={handleLoadButton}
+      >
         Ещё
       </button>
-    </div>
+    </section>
   );
 }
 
