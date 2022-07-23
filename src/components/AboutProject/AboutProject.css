@@ -1,0 +1,132 @@
+.project {
+  padding: 110px 0;
+  max-width: 1140px;
+  width: 100%;
+}
+
+.project-items {
+  margin: 0 0 110px 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.project-item {
+  max-width: 550px;
+  width: 100%;
+}
+
+.project-item__title {
+  margin: 70px 0 26px 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.project-item:first-child {
+  margin-right: 40px;
+}
+
+.project-item__subtitle {
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tracker-items {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tracker-item {
+  width: 100%;
+}
+
+.tracker-item__duration {
+  background-color: #f2f2f2;
+  padding: 10px 0 10px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+}
+
+.tracker-item__duration_theme_dark {
+  background-color: #000000;
+  color: #fff;
+}
+
+.tracker-item__title {
+  margin: 10px 0 0;
+  text-align: center;
+  color: #a0a0a0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    padding: 90px 0;
+  }
+
+  .project-items {
+    margin: 0 0 95px 0;
+  }
+
+  .project-item:first-child {
+    margin-right: 30px;
+  }
+
+  .project-item__title {
+    margin: 70px 0 20px 0;
+  }
+
+  .project-item__subtitle {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .project {
+    padding: 68px 0;
+  }
+
+  .project-items {
+    margin: 0 0 56px 0;
+    flex-direction: column;
+  }
+
+  .project-item__title {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 60px 0 16px 0;
+  }
+
+  .project-item__subtitle {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .tracker-items {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .tracker-item__duration {
+    font-size: 11px;
+    line-height: 13px;
+  }
+
+  .tracker-item__title {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+  }
+}
