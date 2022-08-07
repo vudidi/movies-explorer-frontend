@@ -38,11 +38,14 @@ function MoviesCard(props) {
               onClick={handleToggleMovie}
             ></button>
           </div>
-          <img
-            className="movie__image"
-            alt={props.movie.name}
-            src={props.movie.image}
-          ></img>
+          <a target="_blank" href={props.movie.trailerLink} rel="noreferrer">
+            {' '}
+            <img
+              className="movie__image"
+              alt={props.movie.name}
+              src={props.movie.image}
+            ></img>
+          </a>
         </li>
       </>
     </>
