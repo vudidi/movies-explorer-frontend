@@ -16,6 +16,10 @@
   opacity: 0.6;
 }
 
+.active-element:disabled {
+  opacity: 1;
+}
+
 .input {
   border: none;
 }

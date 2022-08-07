@@ -1,7 +1,34 @@
 import React from 'react';
+import { useForm } from 'react-hook-form';
 import AuthForm from '../AuthForm/AuthForm.js';
+import { regExName, regExEmail } from '../../utils/regEx';
 
-function Register() {
+function Register(props) {
+  const [isDataChanged, setDataChanged] = React.useState(true);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+  } = useForm({
+    defaultValues: {
+      email: '',
+      password: '',
+      name: '',
+    },
+    mode: 'onChange',
+  });
+
+  function onRegisterSubmit(data) {
+    props.handleRegister({
+      email: data.email,
+      password: data.password,
+      name: data.name,
+    });
+
+    setDataChanged(true);
+  }
+
   return (
     <AuthForm
       title="Добро пожаловать!"
@@ -10,6 +37,12 @@ function Register() {
       linkSpan="Уже зарегистрированы?"
       linkName="Войти"
       path="/signin"
+      onHandleSubmit={handleSubmit(onRegisterSubmit)}
+      isValid={isValid}
+      status={props.status}
+      isErrorActive={props.isErrorActive}
+      isDataChanged={isDataChanged}
+      isSubmitting={props.isSubmitting}
     >
       <div className="auth__input-container">
         {' '}
@@ -20,12 +53,29 @@ function Register() {
             name="name"
             id="register-name"
             className="input auth__input register__name"
-            defaultValue="Виталий"
-            minLength="2"
-            maxLength="40"
-            required
-            autoComplete="off"
+            {...register('name', {
+              required: 'Поле обязательно для заполнения',
+              onChange: () => {
+                setDataChanged(false);
+              },
+              minLength: {
+                value: 2,
+                message: 'Минимальное количество символов: 2',
+              },
+              maxLength: {
+                value: 30,
+                message: 'Максимальное количество символов: 30',
+              },
+              pattern: {
+                value: regExName,
+                message:
+                  'Имя должно содержать только латиницу, кириллицу, пробел или дефис',
+              },
+            })}
           />
+          {errors.name && (
+            <span className="auth__input-error">{errors.name.message}</span>
+          )}
         </label>
       </div>
 
@@ -38,12 +88,20 @@ function Register() {
             name="email"
             id="register-email"
             className="input auth__input register__email"
-            defaultValue="pochta@yandex.ru"
-            minLength="2"
-            maxLength="40"
-            required
-            autoComplete="off"
+            {...register('email', {
+              required: 'Поле обязательно для заполнения',
+              onChange: () => {
+                setDataChanged(false);
+              },
+              pattern: {
+                value: regExEmail,
+                message: 'Введите корректную почту',
+              },
+            })}
           />
+          {errors.email && (
+            <span className="auth__input-error">{errors.email.message}</span>
+          )}
         </label>
       </div>
 
@@ -55,15 +113,27 @@ function Register() {
             type="password"
             name="password"
             id="register-password"
+            autoComplete="new-password"
             className="input auth__input register__password"
-            defaultValue="12345"
-            minLength="6"
-            maxLength="30"
-            required
-            autoComplete="off"
+            {...register('password', {
+              required: 'Поле обязательно для заполнения',
+              onChange: () => {
+                setDataChanged(false);
+              },
+              minLength: {
+                value: 6,
+                message: 'Минимальное количество символов: 6',
+              },
+              maxLength: {
+                value: 30,
+                message: 'Максимальное количество символов: 30',
+              },
+            })}
           />
+          {errors.password && (
+            <span className="auth__input-error">{errors.password.message}</span>
+          )}
         </label>
-        <span className="form-error">Что-то пошло не так...</span>
       </div>
     </AuthForm>
   );

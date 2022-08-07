@@ -17,10 +17,16 @@ function Header(props) {
         <Navigation
           onOpenMenu={props.onOpenMenu}
           isMenuOpen={props.isMenuOpen}
+          loggedIn={props.loggedIn}
         />
 
         {/* Хедер НЕавторизованного пользователя */}
-        <div className="header__unauth-nav">
+        <div
+          className={`header__unauth-nav ${
+            !props.loggedIn && 'header__unauth-nav_active'
+          }`}
+        >
+          {' '}
           <Link to="/signup" className="active-element header__link-signup">
             Регистрация
           </Link>

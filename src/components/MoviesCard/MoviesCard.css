@@ -12,13 +12,14 @@
 }
 
 .movie__title {
-  margin-right: 20px;
+  margin-right: 30px;
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
 }
 
-.movie__durarion {
+.movie__duration {
+  max-width: 80px;
   color: #a0a0a0;
   font-weight: 400;
   font-size: 11px;
@@ -53,8 +54,9 @@
 }
 
 .movie__image {
-  width: 220px;
+  max-width: 220px;
   height: 122px;
+  width: 100%;
   object-fit: cover;
   align-self: center;
   margin-right: 6px;
@@ -82,8 +84,12 @@
     width: 100%;
   }
 
+  .movie__title {
+    margin-right: 0;
+  }
+
   .movie__image {
-    width: 300px;
+    max-width: 300px;
     height: 168px;
     align-self: center;
     padding-top: 25px;
@@ -92,6 +98,8 @@
 
   .movie__info {
     margin: 14px 0 18px;
+    max-width: 80%;
+    width: 100%;
   }
 
   .movie__durarion {
@@ -111,7 +119,6 @@
   }
 
   .movie__title {
-    margin-right: 0;
     font-size: 12px;
     line-height: 15px;
   }
