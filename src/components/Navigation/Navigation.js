@@ -9,7 +9,11 @@ function Navigation(props) {
   return (
     <>
       {/* Навигация по фильмам авторизованного пользователя */}
-      <div className="header__movies-nav header__movies-nav_active">
+      <div
+        className={`header__movies-nav ${
+          props.loggedIn && 'header__movies-nav_active'
+        } `}
+      >
         <NavLink to="/movies" className="active-element header__link-movies">
           Фильмы
         </NavLink>
@@ -22,7 +26,11 @@ function Navigation(props) {
       </div>
 
       {/* Навигация по профилю авторизованного пользователя */}
-      <div className="header__account-nav header__account-nav_active">
+      <div
+        className={`header__account-nav ${
+          props.loggedIn && 'header__account-nav_active'
+        } `}
+      >
         <Link to="/profile" className="active-element header__account-text">
           Аккаунт
         </Link>
@@ -34,7 +42,9 @@ function Navigation(props) {
       {/* Бургерное меню */}
       <div
         className={`header__menu-icon ${
-          props.isMenuOpen && 'header__menu-icon_active'
+          props.isMenuOpen
+            ? 'header__menu-icon_active header__menu-icon_fixed'
+            : !props.loggedIn && 'header__menu-icon_unactive'
         }`}
         onClick={toggleBurgerMenu}
       >
