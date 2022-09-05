@@ -3,4 +3,12 @@
 
 `Ссылка на проект` https://vudidi-diplom.nomoreparties.sbs
 
-`Дизайн проекта` https://www.figma.com/file/cKGqcX3NFbx5y6jyvX306V/Diploma-(Copy)-Pink?node-id=932%3A4182
+`API` https://github.com/vudidi/movies-explorer-api
+
+## Запуск проекта
+
+`git clone https://github.com/vudidi/movies-explorer-frontend.git` - клонировать репозиторий
+
+`npm install` - установить зависимости  
+`npm run start` - запустить сервер  
+`npm run build` - собрать проект
